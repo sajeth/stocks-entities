@@ -1,5 +1,6 @@
 package com.saji.stocks.entities.stock;
 
+
 import com.saji.stocks.entities.models.BaseEntity;
 
 import javax.persistence.Basic;
@@ -27,7 +28,7 @@ public class StockEntity extends BaseEntity {
     @Column(name = "SYMBOL", nullable = false)
     private String symbol;
 
-    @Column(name = "EXCHANGE")
+    @Column(name = "EXCHANGE", nullable = false)
     private String exchange;
 
     @Column(name = "SECTOR")
@@ -56,8 +57,8 @@ public class StockEntity extends BaseEntity {
         return exchange;
     }
 
-    public void setExchange(final String value) {
-        this.exchange = value;
+    public void setExchange(String exchange) {
+        this.exchange = exchange;
     }
 
     public String getSector() {
