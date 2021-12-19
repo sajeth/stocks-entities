@@ -8,8 +8,8 @@ import javax.persistence.Table;
 import java.math.BigDecimal;
 
 @Entity
-@Table(name = "INDEXES")
-public class Indx extends BaseEntity {
+@Table(name = "INDEX")
+public class Index extends BaseEntity {
     @Column(name = "OPEN", nullable = false)
     private BigDecimal open;
     @Column(name = "HIGH", nullable = false)
@@ -33,21 +33,7 @@ public class Indx extends BaseEntity {
     @Column(name = "PERCENTAGE_IN_TOTAL_TURNOVER", nullable = false)
     private BigDecimal percentageInTotalTurnOver;
 
-    public Indx() {
-    }
-
-    public Indx(BigDecimal open, BigDecimal high, BigDecimal currentValue, BigDecimal low, BigDecimal prevClose, BigDecimal chPts, BigDecimal chPercentage, BigDecimal wk52High, BigDecimal wk52Low, BigDecimal turnoverInCr, BigDecimal percentageInTotalTurnOver) {
-        this.open = open;
-        this.high = high;
-        this.currentValue = currentValue;
-        this.low = low;
-        this.prevClose = prevClose;
-        this.chPts = chPts;
-        this.chPercentage = chPercentage;
-        this.wk52High = wk52High;
-        this.wk52Low = wk52Low;
-        this.turnoverInCr = turnoverInCr;
-        this.percentageInTotalTurnOver = percentageInTotalTurnOver;
+    public Index() {
     }
 
     public BigDecimal getOpen() {
