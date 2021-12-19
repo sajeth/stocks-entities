@@ -7,4 +7,5 @@ module stocks.entities {
     exports com.saji.entities.data to stocks.core;
     exports com.saji.entities.configurations to stocks.core;
     exports com.saji.entities.trading to stocks.core;
+    exports com.saji.entities to stocks.core;
 }

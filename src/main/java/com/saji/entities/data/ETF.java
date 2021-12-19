@@ -10,7 +10,7 @@ import java.math.BigInteger;
 
 @Entity
 @Table(name = "ETF")
-public class Etf extends BaseEntity {
+public class ETF extends BaseEntity {
     @Column(name = "ASSET_TYPE", nullable = false)
     private BigInteger assetType;
     @Column(name = "LTP_CLOSE", nullable = false)
@@ -32,21 +32,9 @@ public class Etf extends BaseEntity {
     @Column(name = "CIRCUIT_LIMITS", nullable = false)
     private String cktLimits;
 
-    public Etf() {
+    public ETF() {
     }
 
-    public Etf(BigInteger assetType, String ltpClose, String change, String dayHighLow, String week52HighLow, String prevCloseOpen, BigDecimal wtAvgPrice, BigInteger totalVol, BigDecimal turnover, String cktLimits) {
-        this.assetType = assetType;
-        this.ltpClose = ltpClose;
-        this.change = change;
-        this.dayHighLow = dayHighLow;
-        this.week52HighLow = week52HighLow;
-        this.prevCloseOpen = prevCloseOpen;
-        this.wtAvgPrice = wtAvgPrice;
-        this.totalVol = totalVol;
-        this.turnover = turnover;
-        this.cktLimits = cktLimits;
-    }
 
     public BigInteger getAssetType() {
         return assetType;
