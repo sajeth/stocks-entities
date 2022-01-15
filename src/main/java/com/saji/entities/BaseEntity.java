@@ -21,28 +21,17 @@ public abstract class BaseEntity {
     private BigInteger createdBy;
 
     @Basic(optional = false)
-    @Column(name = "CREATED_DATE", nullable = false)
+    @Column(name = "CREATED_DT", nullable = false)
     @Temporal(TemporalType.TIMESTAMP)
     private Date createdDate;
 
     @Column(name = "MODIFIED_BY")
     private BigInteger modifiedBy;
 
-    @Column(name = "MODIFIED_DATE")
+    @Column(name = "MODIFIED_DT")
     @Temporal(TemporalType.TIMESTAMP)
     private Date modifiedDate;
 
-    @Column(name = "LOGICAL_DEL_IN")
-    private String logicalDeleteIn;
-
-
-    public String getLogicalDelIn() {
-        return logicalDeleteIn;
-    }
-
-    public void setLogicalDelIn(final String value) {
-        this.logicalDeleteIn = value;
-    }
 
     public BigInteger getCreatedBy() {
         return this.createdBy;

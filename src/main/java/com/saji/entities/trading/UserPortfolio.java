@@ -5,7 +5,6 @@ import com.saji.entities.BaseEntity;
 import javax.persistence.*;
 import java.math.BigDecimal;
 import java.math.BigInteger;
-import java.util.Set;
 
 @Entity
 @Table(name = "USER_PORTFOLIO")
@@ -24,8 +23,11 @@ public class UserPortfolio extends BaseEntity {
     @ManyToOne
     @JoinColumn(name = "USER_ID", nullable = false)
     private User userid;
-    @OneToMany(mappedBy = "transaction")
-    private Set<UserTransactions> transactions;
+    @Column(name = "LINK", nullable = false)
+    private String link;
+    @Column(name = "LOGICAL_DEL_IN")
+    private String logicalDeleteIn;
+
 
     public UserPortfolio() {
     }
@@ -87,11 +89,19 @@ public class UserPortfolio extends BaseEntity {
         this.userid = userid;
     }
 
-    public Set<UserTransactions> getTransactions() {
-        return transactions;
+    public String getLink() {
+        return link;
     }
 
-    public void setTransactions(Set<UserTransactions> transactions) {
-        this.transactions = transactions;
+    public void setLink(String link) {
+        this.link = link;
+    }
+
+    public String getLogicalDeleteIn() {
+        return logicalDeleteIn;
+    }
+
+    public void setLogicalDeleteIn(String logicalDeleteIn) {
+        this.logicalDeleteIn = logicalDeleteIn;
     }
 }

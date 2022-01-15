@@ -29,6 +29,18 @@ public class Exchange extends BaseEntity {
     @OneToMany(mappedBy = "exchange")
     private Set<ExchngInvstmnt> exchngInvstmnts;
 
+    @Column(name = "LOGICAL_DEL_IN")
+    private String logicalDeleteIn;
+
+
+    public String getLogicalDelIn() {
+        return logicalDeleteIn;
+    }
+
+    public void setLogicalDelIn(final String value) {
+        this.logicalDeleteIn = value;
+    }
+
     public Exchange() {
     }
 

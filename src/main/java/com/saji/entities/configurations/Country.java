@@ -21,6 +21,18 @@ public class Country extends BaseEntity {
     @OneToMany(mappedBy = "country")
     private Set<Exchange> exchanges;
 
+    @Column(name = "LOGICAL_DEL_IN")
+    private String logicalDeleteIn;
+
+
+    public String getLogicalDelIn() {
+        return logicalDeleteIn;
+    }
+
+    public void setLogicalDelIn(final String value) {
+        this.logicalDeleteIn = value;
+    }
+
     public Country() {
     }
 

@@ -9,26 +9,26 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "ACTION_STEPS")
-public class ActionSteps extends BaseEntity {
+@Table(name = "STEP")
+public class Step extends BaseEntity {
 
     @ManyToOne
     @JoinColumn(name = "ACTION_ID", nullable = false)
-    private Actions actions;
+    private Action action;
     @ManyToOne
     @JoinColumn(name = "TYPE", nullable = false)
     private Lov actionType;
 
-    public ActionSteps() {
+    public Step() {
         super();
     }
 
-    public Actions getActions() {
-        return actions;
+    public Action getAction() {
+        return action;
     }
 
-    public void setActions(Actions actions) {
-        this.actions = actions;
+    public void setAction(Action actions) {
+        this.action = actions;
     }
 
     public Lov getActionType() {

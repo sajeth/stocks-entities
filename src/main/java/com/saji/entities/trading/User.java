@@ -21,6 +21,10 @@ public class User extends BaseEntity {
     private String email;
     @Column(name = "PHONE_NUMBER", nullable = false)
     private String phoneNumber;
+    @Column(name = "LINK", nullable = false)
+    private String link;
+    @Column(name = "LOGICAL_DEL_IN")
+    private String logicalDeleteIn;
     @OneToMany(mappedBy = "userid")
     private Set<UserPortfolio> userPortfolios;
 
@@ -75,11 +79,27 @@ public class User extends BaseEntity {
         this.phoneNumber = phoneNumber;
     }
 
+    public String getLink() {
+        return link;
+    }
+
+    public void setLink(String link) {
+        this.link = link;
+    }
+
     public Set<UserPortfolio> getUserPortfolios() {
         return userPortfolios;
     }
 
     public void setUserPortfolios(Set<UserPortfolio> userPortfolios) {
         this.userPortfolios = userPortfolios;
+    }
+
+    public String getLogicalDeleteIn() {
+        return logicalDeleteIn;
+    }
+
+    public void setLogicalDeleteIn(String logicalDeleteIn) {
+        this.logicalDeleteIn = logicalDeleteIn;
     }
 }

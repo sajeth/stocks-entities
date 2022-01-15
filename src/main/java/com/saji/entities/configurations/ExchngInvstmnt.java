@@ -26,6 +26,17 @@ public class ExchngInvstmnt extends BaseEntity {
     private Integer invstmntColEnd;
     @Column(name = "INVESTMENT_PATH", nullable = false)
     private String invstmntPath;
+    @Column(name = "LOGICAL_DEL_IN")
+    private String logicalDeleteIn;
+
+
+    public String getLogicalDelIn() {
+        return logicalDeleteIn;
+    }
+
+    public void setLogicalDelIn(final String value) {
+        this.logicalDeleteIn = value;
+    }
 
     public ExchngInvstmnt() {
     }

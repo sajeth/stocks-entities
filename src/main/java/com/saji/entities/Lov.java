@@ -10,6 +10,17 @@ public class Lov extends BaseEntity {
 
     @Column(name = "TYPE")
     private String type;
+    @Column(name = "LOGICAL_DEL_IN")
+    private String logicalDeleteIn;
+
+
+    public String getLogicalDelIn() {
+        return logicalDeleteIn;
+    }
+
+    public void setLogicalDelIn(final String value) {
+        this.logicalDeleteIn = value;
+    }
 
     public Lov() {
     }
